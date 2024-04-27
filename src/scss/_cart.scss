@@ -1,0 +1,186 @@
+@import './meal-cart';
+@import './btn';
+@import './info-of-order';
+
+.cart {
+  height: 100vh;
+  
+  // .cart__section
+
+  display: flex;
+  flex-direction: column;
+  // @media (max-width: 890px) {
+  //   padding-left: 15px;
+  // }
+  // @media (max-width: 590px) {
+  //   width: 100%;
+  //   border: none;
+  // }
+  // @media (max-width: 335px) {
+  //   padding-left: 5px;
+  // }
+  // @media (max-width: 590px) {
+  //   margin-top: 30px;
+  // }
+  // @media (max-width: 507px) {
+  //   // align-items: center;
+  //   width: 100%;
+  //   // background-color: red;
+  // }
+
+  &__info-of-order {
+    margin-bottom: 40px;
+  }
+  // .cart__section
+
+  &__section {
+    margin-bottom: 41px;
+    margin-top: 25px;
+  }
+  // // .cart__items
+
+  &__items {
+  }
+
+  // .cart__form
+
+  &__form {
+    display: flex;
+    padding: 8px 11px;
+    // padding: 20px 17px 24px 17px;
+    border: 1px solid #eeeeee;
+    border-radius: 100px;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 29px;
+    @media (max-width: 380px) {
+      flex-direction: column;
+      padding: 30px 11px;
+      justify-content: center;
+      border: none;
+      margin-bottom: 15px;
+    }
+  }
+
+  // .cart__promocode
+
+  &__promocode {
+    font-size: 16px;
+    flex-grow: 1;
+    // flex-basis: 100%;
+    @media (max-width: 380px) {
+      border: 1px solid #eeeeee;
+      border-radius: 100px;
+      padding: 23px 30px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  // .cart__auth-btn
+
+  &__auth-btn {
+  }
+
+  // .cart__order-info
+
+  &__order-info {
+  }
+}
+.section {
+  // .section__text
+
+  &__text {
+  }
+}
+.meal-item {
+  // .meal-item__img
+
+  &__img {
+  }
+
+  // .meal-item__text
+
+  &__text {
+  }
+
+  // .meal-item__title
+
+  &__title {
+  }
+
+  // .meal-item__price
+
+  &__price {
+  }
+
+  // .meal-item__price-icon
+
+  &__price-icon {
+  }
+
+  // .meal-item__adding-meal
+
+  &__adding-meal {
+  }
+
+  // .meal-item__minus
+
+  &__minus {
+  }
+
+  // .meal-item__count
+
+  &__count {
+  }
+
+  // .meal-item__plus
+
+  &__plus {
+  }
+
+  // .meal-item__refuse-meal
+
+  &__refuse-meal {
+    max-width: 11.86px;
+    //     align-self: flex-start;
+    //     margin-top: 8px;
+  }
+}
+.auth-btn {
+}
+.auth-btn--icon {
+}
+.auth-btn--padding-promocode {
+}
+.auth-btn--center {
+}
+.info-of-order {
+  // .info-of-order__service
+
+  &__service {
+  }
+
+  // .info-of-order__count-dishes
+
+  &__count-dishes {
+  }
+
+  // .info-of-order__price
+
+  &__price {
+  }
+
+  // .info-of-order__currency
+
+  &__currency {
+  }
+}
+.auth-btn--padding-order {
+}

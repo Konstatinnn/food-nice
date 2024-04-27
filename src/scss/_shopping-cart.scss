@@ -1,0 +1,38 @@
+.shopping-cart {
+  animation: test2 1s;
+  margin-right: 10px;
+  // animation-iteration-count: infinite;
+  width: 34px;
+  height: 34px;
+  background: url('/src/img/info/cart.svg') 50% 50% no-repeat;
+  background-color: #fe724c;
+  border-radius: 50%;
+  &--position {
+    position: absolute;
+    top: 12.14px;
+    right: 6.14px;
+  }
+  @media (max-width: 590px) {
+    display: block;
+  }
+
+  // @media (max-width: 415px) {
+  //   bottom: 30px;
+  //   left: 5px;
+  // }
+  // .shopping-cart__icon
+
+  &__icon {
+  }
+}
+
+@keyframes test2 {
+  0% {
+  }
+
+  100% {
+    transform: scale(1.6, 1.6);
+  }
+  0% {
+  }
+}

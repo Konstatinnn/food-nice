@@ -1,0 +1,54 @@
+@import './user';
+
+.left-menu {
+  z-index: 51;
+  width: 50vw;
+  position: absolute;
+  // background-color: red;
+  background-color: #ffffff;
+  height: 100%;
+  padding: 21px 0 20px 19px;
+  // .left-menu__body
+  @media (max-width: 479px) {
+    width: 100vw;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // .left-menu__refuse
+
+  &__refuse {
+    width: 22.87px;
+  }
+
+  // .left-menu__user
+
+  &__user {
+    align-self: center;
+    flex-grow: 1;
+    max-width: 185px;
+  }
+
+  // .left-menu__cart
+
+  &__cart {
+    display: flex;
+    align-items: center;
+
+    // background-color: blue;
+  }
+
+  // .left-menu__shopping-cart
+
+  &__shopping-cart {
+  }
+
+  // .left-menu__go-cart
+
+  &__go-cart {
+  }
+}

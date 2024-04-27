@@ -1,0 +1,119 @@
+.meal-cart {
+  display: flex;
+  margin-bottom: 27px;
+  // .meal-cart__img
+  // background-color: red;
+
+  &__img {
+    border-radius: 15px;
+    margin-right: 21px;
+    max-height: 82px;
+  }
+
+  // .meal-cart__text
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  // .meal-cart__title
+
+  &__title {
+    font-size: 18.21px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  // .meal-cart__price
+
+  &__price {
+    color: #fe724c;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  // .meal-cart__price-icon
+
+  &__price-icon {
+  }
+
+  // .meal-cart__adding-meal-cart
+
+  &__adding-meal {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 12.44px;
+    margin-right: 16px;
+    @media (max-width: 360px) {
+      margin-right: 10px;
+      gap: 5px;
+      flex-direction: column;
+    }
+  }
+
+  // .meal-cart__minus
+
+  &__minus {
+    cursor: pointer;
+    border: 1px solid #fe724c;
+    align-self: flex-start;
+    // padding: 14.59px 9.15px 14.59px 9.15px;
+    border-radius: 50%;
+    font-size: 15px;
+    width: 28.28px;
+    height: 28.28px;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      background-color: #fe724c;
+      width: 10px;
+      height: 2px;
+      position: absolute;
+      top: calc(50% - 1px);
+      left: calc(50% - 5px);
+    }
+  }
+
+  // .meal-cart__count
+
+  &__count {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  // .meal-cart__plus
+
+  &__plus {
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 14.59px 9.15px 14.59px 9.15px;
+    border-radius: 50%;
+    font-size: 15px;
+    width: 28.28px;
+    height: 28.28px;
+    position: relative;
+    background-color: #fe724c;
+    &::after {
+      content: '';
+
+      background: url(/src/img/cart/plus.svg) 0 0 no-repeat;
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      position: absolute;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+    }
+  }
+
+  // .meal-cart__refuse-meal-cart
+
+  &__refuse-meal {
+    max-width: 11.86px;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}

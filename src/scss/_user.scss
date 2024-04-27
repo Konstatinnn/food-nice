@@ -1,0 +1,53 @@
+.user {
+  // .user__img
+
+  &__img {
+    margin-bottom: -20px;
+  }
+
+  // .user__icon
+
+  &__icon {
+  }
+
+  // .user__name
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    // line-height: 1.4;
+    margin-bottom: 40px;
+  }
+
+  // .user__menu
+
+  &__menu {
+    padding-left: 38px;
+    background: url('/src/img/info/logIn.svg') 0 0 no-repeat;
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    // cursor: pointer;
+  }
+
+  // .user__link-menu
+
+  &__link-menu {
+    color: inherit;
+  }
+
+  // .user__cart
+
+  &__cart {
+    padding-left: 38px;
+    font-size: 16px;
+    background: url('/src/img/info/register.svg') 6px 0 no-repeat;
+    line-height: 1.6;
+  }
+
+  // .user__link-cart
+
+  &__link-cart {
+    color: inherit;
+  }
+}

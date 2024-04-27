@@ -1,0 +1,69 @@
+.btn {
+  // align-self: flex-start;
+  background: url('/src/img/info/switch.svg') 10px 11px no-repeat;
+  font-size: 16px;
+  background-color: #fe724c;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  color: #fff;
+  padding: 13px 22px 14px 44px;
+  border-radius: 28.5px;
+
+  &--icon {
+    background-image: none;
+  }
+  &--padding-cart {
+    padding: 11px 22px 11px 25px;
+  }
+  &--padding-order {
+    padding: 19px 59px 16px 59px;
+  }
+
+  &--center {
+    align-self: center;
+  }
+
+  &--padding-register {
+    padding: 20px 27px 20px 27px;
+  }
+  &--uppercase-fz-fw {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &--mb-register {
+    margin-bottom: 29px;
+  }
+
+  &--padding-log-in {
+    padding: 21px 101px;
+  }
+  &--padding-dish-info {
+    padding: 13px 20px 14px 46px;
+  }
+  &--icon-dish-info {
+    background: url('/src/img/dish-info/cart-icon.svg') 12px 14px no-repeat;
+    background-color: #fe724c;
+  }
+
+  &--madia-none {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &--none {
+    display: none;
+  }
+  &--madia-visiable {
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--padding-succes-order {
+    padding: 19px 50px;
+  }
+}

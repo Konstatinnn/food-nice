@@ -1,0 +1,25 @@
+.rating-of-meal {
+  display: flex;
+  gap: 4.38px;
+  align-items: center;
+  font-size: 12.14px;
+  padding: 6.07px 9.29px 6.07px 8.86px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 136px;
+  bottom: -14.5px;
+  left: 13px;
+  box-shadow: 4px 4px 8px 0px rgba(217, 160, 106, 0.2);
+
+  // .rating-of-meal__ball
+
+  &__ball {
+  }
+
+  // .rating-of-meal__icon
+
+  &__icon {
+    width: 10.27px;
+    height: 9.81px;
+  }
+}

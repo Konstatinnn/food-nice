@@ -1,0 +1,32 @@
+.info-of-order {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #f1f2f3;
+  color: #000;
+  margin-bottom: 16px;
+
+  // .info-of-order__count-dishes
+
+  &__count-dishes {
+    font-size: 18px;
+    color: #bebebe;
+  }
+  // .info-of-order__service
+
+  &__service {
+  }
+
+  // .info-of-order__price
+
+  &__price {
+  }
+
+  // .info-of-order__currency
+
+  &__currency {
+    font-size: 14px;
+    color: #9796a1;
+  }
+}

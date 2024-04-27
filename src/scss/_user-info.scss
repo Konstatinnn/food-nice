@@ -1,0 +1,15 @@
+@import './user';
+.user-info {
+  flex: 0 1 22.59167%;
+
+  display: flex;
+  justify-content: space-between;
+  height: 98vh;
+  padding-bottom: 10px;
+  flex-direction: column;
+  border-right: 1px solid #d4d6e0;
+  // background-color: red;
+  @media (max-width: 590px) {
+    display: none;
+  }
+}
