@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap");
 /*Обнуление*/
 * {
   padding: 0;
@@ -39,9 +40,10 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   overflow-x: hidden;
   background-color: FBFBFB;
+  background-color: RED;
 }
 
 input,

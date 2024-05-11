@@ -1,10 +1,10 @@
-@import './meal-cart';
-@import './btn';
-@import './info-of-order';
+@import './Meal-cart.module';
+@import './Btn.module';
+@import './Info-of-order.module';
 
 .cart {
   height: 100vh;
-  
+
   // .cart__section
 
   display: flex;

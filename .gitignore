@@ -23,7 +23,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-jsconfig.json
+
+
 check.html
-info
+jsconfig.json
 package-lock.json
+info.txt

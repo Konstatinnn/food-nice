@@ -1,5 +1,5 @@
-@import './section';
-@import './dishes';
+@import './_Section.module';
+@import './_Dishes.module';
 .menu {
   // .menu__section
   &__section {

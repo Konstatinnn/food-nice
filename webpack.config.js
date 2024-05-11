@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 console.log(path.resolve(__dirname, 'dist'));
 module.exports = {
   mode: 'development',
@@ -19,24 +19,31 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-transform-runtime'], // Добавлено здесь
           },
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          // Для разработки используйте 'style-loader', чтобы стили были внедрены  в DOM через тег <style>
-          // Для продакшена используйте MiniCssExtractPlugin.loader, чтобы стили были в отдельном CSS файле
-          process.env.NODE_ENV !== 'production'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          'css-loader', // Переводит CSS в CommonJS
-          'sass-loader', // Компилирует Sass в CSS
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['css-loader'],
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
       },
     ],
   },
@@ -44,15 +51,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'src'),
     },
+
     hot: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Разрешить опускать эти расширения при импорте
   },
 };
