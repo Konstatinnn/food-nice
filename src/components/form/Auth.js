@@ -1,27 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../img/login/Group.svg';
 import Button from '../Button';
 import styles from './Auth.scss';
 import Inputs from './Inputs';
 
-// import styles from '../scss/_User-form.module.scss';
-
 const inputs = [];
 
 const Auth = ({ typeOfForm }) => {
-  const test = 5;
-  const testHandler = () => {
-    console.log(test);
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [inputsData, setInputsData] = useState({
+    email: '',
+    pass: '',
+    name: '',
+  });
+
+  const validationsInputs = (setInputsData) => {
+    setIsFormValid(setInputsData);
   };
-  console.log(typeOfForm);
-  // const test = (e) => {
-  //   e.preventDefault();
-  //   console.log(1);
+
+  const getInputsData = ({ email, pass, name }) => {
+    setInputsData((prev) => {
+      return {
+        email: email,
+        pass: pass,
+        name: name,
+      };
+    });
+  };
+
+  // const getInputsData = ({
+  //   emailValid: email,
+  //   passValid: pass,
+  //   nameValid: name,
+  // }) => {
+  //   setInputsData((prev) => {
+  //     return {
+  //       email: email,
+  //       pass: pass,
+  //       name: name,
+  //     };
+  //   });
   // };
-  // const changeType = (e) => {
-  //   e.preventDefault();
-  //   props.changeFormAuth();
-  // };
+
+  const testHandler = () => {
+    console.log(inputsData);
+  };
+
   const check = (e) => {
     e.preventDefault();
   };
@@ -35,11 +59,14 @@ const Auth = ({ typeOfForm }) => {
           <form action="" className="auth__form" onClick={check}>
             <div className="auth__text">{typeOfForm.text}</div>
             <Inputs
+              getInputsData={getInputsData}
+              validationsInputs={validationsInputs}
               shouldShowInpName={typeOfForm.shouldShowInpName}
               parentClass={'auth__inputs'}
               а
             />
             <Button
+              disabled={isFormValid}
               onClick={testHandler}
               text={'Вход'}
               parentClass="auth__btn"

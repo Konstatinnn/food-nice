@@ -1,9 +1,14 @@
 import React from 'react';
 import './Btn.scss';
 
-const Button = ({ text, parentClass, onClick }) => {
+const Button = ({ text, parentClass, onClick, disabled }) => {
+  // console.log(disabled);
   return (
-    <button onClick={onClick} className={`btn ${parentClass}`}>
+    <button
+      disabled={!disabled}
+      onClick={onClick}
+      className={`btn ${parentClass}`}
+    >
       {text}
     </button>
   );
