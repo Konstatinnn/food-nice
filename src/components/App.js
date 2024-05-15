@@ -3,8 +3,6 @@ import { Fragment } from 'react';
 import Container from './Container';
 import '../scss/style.css';
 
-import Auth from './form/Auth';
-
 const typeOfForm = {
   login: {
     text: 'Вход',
@@ -19,6 +17,8 @@ const typeOfForm = {
     changeTypeForm: 'Войти',
   },
 };
+
+import Auth from './form/Auth';
 
 const App = () => {
   const [whichFormToShow, setWhichFormToShow] = useState(false); // false - register true - login

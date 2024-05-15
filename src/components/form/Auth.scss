@@ -14,9 +14,12 @@
 
   // .auth__icons
   &__btn {
+    justify-content: center;
+    display: flex;
+    align-items: center;
     margin-bottom: 29px;
     background-image: none;
-    padding: 21px 101px;
+    // padding: 21px 101px;
     // justify-self: center;
     align-self: center;
   }

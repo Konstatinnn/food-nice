@@ -3,9 +3,10 @@
   background: url('/src/img/info/switch.svg') 10px 11px no-repeat;
   font-size: 16px;
   background-color: #fe724c;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 10px 63px 1px rgba(34, 60, 80, 0.25);
   color: #fff;
-  padding: 13px 22px 14px 44px;
+
+  // padding: 13px 22px 14px 44px;
   border-radius: 28.5px;
 
   &--icon {
@@ -22,8 +23,8 @@
     align-self: center;
   }
 
-  &--padding-register {
-    padding: 20px 27px 20px 27px;
+  &--register {
+    padding: 22px 28px;
   }
   &--uppercase-fz-fw {
     font-size: 15px;
@@ -35,7 +36,7 @@
     margin-bottom: 29px;
   }
 
-  &--padding-log-in {
+  &--log-in {
     padding: 21px 101px;
   }
   &--padding-dish-info {

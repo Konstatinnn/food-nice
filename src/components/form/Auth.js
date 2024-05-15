@@ -60,8 +60,10 @@ const Auth = ({ typeOfForm, whichFormToShow, changeFormAuth }) => {
             <Button
               disabled={isFormValid}
               onClick={testHandler}
-              text={'Вход'}
-              parentClass="auth__btn"
+              text={whichFormToShow ? 'ВХОД' : 'ЗАРЕГИСТРИРОВАТЬСЯ'}
+              parentClass={`auth__btn ${
+                whichFormToShow ? 'btn--log-in' : 'btn--register'
+              }`}
             />
             <div className="auth__addit-text">
               <div className="auth__question">
