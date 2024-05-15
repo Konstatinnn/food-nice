@@ -21,17 +21,19 @@ const typeOfForm = {
 };
 
 const App = () => {
-  const [isUserLogin, setIsUserLogin] = useState(false);
+  const [whichFormToShow, setWhichFormToShow] = useState(false); // false - register true - login
 
   const changeFormAuth = () => {
-    setIsUserLogin(!isUserLogin);
+    setWhichFormToShow(!whichFormToShow);
   };
 
   return (
     <>
       <Auth
+        changeFormAuth={changeFormAuth}
+        whichFormToShow={whichFormToShow}
         typeOfForm={
-          isUserLogin ? { ...typeOfForm.login } : { ...typeOfForm.register }
+          whichFormToShow ? { ...typeOfForm.login } : { ...typeOfForm.register }
         }
       />
     </>

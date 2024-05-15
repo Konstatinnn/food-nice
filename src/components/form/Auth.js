@@ -6,7 +6,7 @@ import Inputs from './Inputs';
 
 const inputs = [];
 
-const Auth = ({ typeOfForm }) => {
+const Auth = ({ typeOfForm, whichFormToShow, changeFormAuth }) => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [inputsData, setInputsData] = useState({
     email: '',
@@ -28,20 +28,6 @@ const Auth = ({ typeOfForm }) => {
     });
   };
 
-  // const getInputsData = ({
-  //   emailValid: email,
-  //   passValid: pass,
-  //   nameValid: name,
-  // }) => {
-  //   setInputsData((prev) => {
-  //     return {
-  //       email: email,
-  //       pass: pass,
-  //       name: name,
-  //     };
-  //   });
-  // };
-
   const testHandler = () => {
     console.log(inputsData);
   };
@@ -49,6 +35,11 @@ const Auth = ({ typeOfForm }) => {
   const check = (e) => {
     e.preventDefault();
   };
+
+  const checker = () => {
+    console.log('test');
+  };
+
   return (
     <div className="auth">
       <div className="auth__container">
@@ -59,6 +50,7 @@ const Auth = ({ typeOfForm }) => {
           <form action="" className="auth__form" onClick={check}>
             <div className="auth__text">{typeOfForm.text}</div>
             <Inputs
+              whichFormToShow={whichFormToShow}
               getInputsData={getInputsData}
               validationsInputs={validationsInputs}
               shouldShowInpName={typeOfForm.shouldShowInpName}
@@ -75,7 +67,14 @@ const Auth = ({ typeOfForm }) => {
               <div className="auth__question">
                 {typeOfForm.additTextQuestion}
               </div>
-              <a href="" className="auth__change-type">
+              <a
+                href=""
+                onClick={() => {
+                  changeFormAuth();
+                }}
+                className="auth__change-type"
+              >
+                {' '}
                 {typeOfForm.changeTypeForm}
               </a>
             </div>

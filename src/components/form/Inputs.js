@@ -2,11 +2,16 @@ import React, { useEffect, useId, useState } from 'react';
 import './Inputs.scss';
 import Input from './Input';
 
-const Inputs = ({ parentClass, validationsInputs, getInputsData }) => {
+const Inputs = ({
+  parentClass,
+  validationsInputs,
+  getInputsData,
+  whichFormToShow,
+}) => {
   const [validForm, setValidForm] = useState({
     emailValid: false,
     passValid: false,
-    nameValid: false,
+    nameValid: whichFormToShow,
   });
 
   const [inputsData, setinputsData] = useState({
@@ -15,9 +20,20 @@ const Inputs = ({ parentClass, validationsInputs, getInputsData }) => {
     name: '',
   });
 
+  useEffect(() => {
+    setValidForm((prev) => ({
+      ...prev,
+      nameValid: whichFormToShow,
+    }));
+  }, [whichFormToShow]);
+
   // const gettingInputsData = () => {};
 
   useEffect(() => {
+    if (whichFormToShow && validForm.emailValid && validForm.passValid) {
+      validationsInputs(true);
+      getInputsData({ ...inputsData });
+    }
     if (!Object.values(validForm).includes(false)) {
       validationsInputs(true);
       getInputsData({ ...inputsData });
@@ -51,8 +67,6 @@ const Inputs = ({ parentClass, validationsInputs, getInputsData }) => {
   ];
 
   function emailValid(inputValid, value) {
-    console.log(inputValid, 'тут корректное значение');
-
     setValidForm((prev) => {
       return { ...prev, emailValid: inputValid };
     });
@@ -81,9 +95,11 @@ const Inputs = ({ parentClass, validationsInputs, getInputsData }) => {
 
   return (
     <div className={`inputs ${parentClass}`}>
-      {InputsData.map((item) => (
-        <Input {...item} key={useId()} />
-      ))}
+      {InputsData.map((item, index) =>
+        whichFormToShow && item.type == 'name' ? null : (
+          <Input whichFormToShow={whichFormToShow} {...item} key={index} />
+        )
+      )}
     </div>
   );
 };

@@ -2,11 +2,25 @@ import React, { useState, useEffect } from 'react';
 import InputError from './InputError';
 import './Input.scss';
 
-const Input = ({ type, placeholder, label, errorText, checkIsInputValid }) => {
+const Input = ({
+  type,
+  placeholder,
+  label,
+  errorText,
+  checkIsInputValid,
+  whichFormToShow,
+}) => {
   const [inputValue, setinputValue] = useState('');
   const [isInputValueValid, setisInputValueValid] = useState(false);
   const [showingShadowOfError, SetShowingShadowOfError] = useState(false);
   const [WhichShadowToShow, setWhichShadowToShow] = useState('');
+
+  useEffect(() => {
+    setinputValue('');
+    setisInputValueValid(false);
+    SetShowingShadowOfError(false);
+    setWhichShadowToShow('');
+  }, [whichFormToShow]);
 
   const whenTheInputIsCorrect = () => {
     SetShowingShadowOfError(false);
@@ -21,7 +35,7 @@ const Input = ({ type, placeholder, label, errorText, checkIsInputValid }) => {
   };
 
   useEffect(() => {
-    if (isInputValueValid) checkIsInputValid(isInputValueValid, inputValue);
+    checkIsInputValid(isInputValueValid, inputValue);
   }, [inputValue, isInputValueValid]);
 
   const checkInputValid = (e) => {
